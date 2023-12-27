@@ -1,0 +1,57 @@
+<main>
+    <body>
+<form
+    [formGroup]="form"
+    (ngSubmit)="onSubmit(form.value)"
+>
+    <fieldset
+        class="d-grid gap col-12"
+    >
+    <legend>Create New Report</legend>
+    <select formControlName="location">
+        <option value="Create New Location">Create New Location</option>
+        <option *ngFor="let l of locations">
+          {{ l }}
+        </option>
+      </select>
+    <input
+        type = "text"
+        name="reporter"
+        placeholder="Name"
+        formControlName="reporter"
+    >
+    <input
+        type = "text"
+        name="reporter"
+        placeholder="Phone: xxx-xxx-xxxx"
+        formControlName="phone"
+    >
+
+    <input
+    type = "text"
+    name="picture"
+    placeholder="Location Only necessary if creating"
+    formControlName="location1"
+    >
+
+    <input
+    type = "text"
+    name="picture"
+    placeholder="Picture URL"
+    formControlName="picture"
+    >
+
+    <button
+        class="btn btn-outline-primary"
+        [disabled]="!form.valid"
+    >
+    SAVE
+    </button>
+    <button id="peep" (click)="onBack()" class="btn btn-primary">
+        Back
+    </button>
+</fieldset>
+</form>
+</body>
+</main>
+

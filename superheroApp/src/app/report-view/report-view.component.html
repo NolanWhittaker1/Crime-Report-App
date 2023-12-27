@@ -1,0 +1,18 @@
+<main>
+    <div class="report-details">
+    <img [src]="currentReport?.picture">
+      <h2>ID: {{ currentReport!.id }}</h2> <br>
+      <h2>Reporter Name: {{ currentReport!.reporter }}</h2> <br>
+      <h2>Location: {{ currentReport!.location }}</h2> <br>
+      <h2>Time: {{ currentReport!.time | date: 'HH:mm:ss' }}</h2> <br>
+      <h2>Date: {{ currentReport!.time | date }}</h2> <br>
+      <h2>Processed: {{ currentReport!.processed }}</h2> <br>
+      <span>
+      <button id="peep" (click)="onBack()" class="btn btn-primary">
+         Back
+      </button>
+      <button (click)="onProcessed(currentReport!.id)" class="btn btn-success">Proccesed</button>
+      <button (click)="onReportDelete(currentReport!.id)" class="btn btn-danger">Delete</button>
+    </span>
+    </div>
+  </main>

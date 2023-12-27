@@ -1,0 +1,29 @@
+<main>
+    <body>
+<form [formGroup]="loginform" (ngSubmit)="onSubmit1()">
+    
+    <h1>Please submit the secret password and your name!</h1>
+    <input
+        type = "text"
+        name="name"
+        placeholder="Name"
+        formControlName="name"
+    > <br>
+    <input
+        type = "text"
+        name="password"
+        placeholder="Password"
+        formControlName="password"
+    > <br>
+    <button
+        class="btn btn-primary"
+        [disabled]="!loginform.valid"
+    >
+    Submit
+    </button>
+    <button id="peep" (click)="onBack()" class="btn btn-primary">
+        Back
+    </button>
+</form>
+    </body>
+</main>

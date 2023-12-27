@@ -1,0 +1,42 @@
+form {
+    width: 15vw;
+    align-items: center;
+}
+input {
+    padding: 10px;
+    margin: 5px;
+}
+
+main {
+  width:100vw;
+  background: linear-gradient(to bottom, #555555, #000000);
+  height: 100vw;
+  display: flex;
+  justify-content: center;
+  user-select: none;
+  
+}
+
+body {
+  margin: 30px;
+  width: 30vw;
+  height: 30vw;
+  background-color: rgba(252, 251, 251, 0.30);
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+  
+}
+
+
+  legend {
+    color:white;
+    font-size: 40px;
+  }
+
+  button {
+    margin-bottom: 10px;
+  }
